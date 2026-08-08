@@ -1,0 +1,8 @@
+# Données propres à chaque serveur et créées en jeu
+data/config.json
+data/voices.json
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

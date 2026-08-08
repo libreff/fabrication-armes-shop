@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrication d'armes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app" class="app hidden" aria-hidden="true">
+        <section id="voyante-panel" class="oracle-panel hidden" role="dialog" aria-modal="true">
+            <div class="oracle-symbol" aria-hidden="true">◉</div>
+            <span class="eyebrow">LA VOYANTE</span>
+            <h1>Veux-tu connaître la suite&nbsp;?</h1>
+            <p>Sa voix s’est tue. Pourtant, son regard attend encore une réponse.</p>
+            <div class="oracle-actions">
+                <button id="answer-no" class="secondary-button" type="button">Non</button>
+                <button id="answer-yes" class="primary-button" type="button">Oui</button>
+            </div>
+        </section>
+
+        <section id="baronne-panel" class="crate-shell hidden" role="dialog" aria-modal="true" aria-labelledby="crate-title">
+            <header class="crate-header">
+                <div>
+                    <span class="eyebrow">ATELIER DE LA BARONNE</span>
+                    <h1 id="crate-title">Plans techniques clandestins</h1>
+                </div>
+                <div class="stock-pill"><span>VOTRE COLLECTION</span><strong><b id="schema-count">0</b> schéma(s)</strong></div>
+                <button id="close-button" class="close-button" type="button" aria-label="Fermer">×</button>
+            </header>
+
+            <div class="military-crate">
+                <div class="crate-planks" aria-hidden="true"></div>
+                <div class="straw-bed" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="loose-ammo ammo-left" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                <div class="loose-ammo ammo-right" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="wrench" aria-hidden="true"></div>
+                <div class="metal-part" aria-hidden="true"></div>
+
+                <article class="blueprint main-blueprint">
+                    <span class="paper-pin" aria-hidden="true"></span>
+                    <header><span>PLAN D'ASSEMBLAGE</span><b>SNS / MK-I</b></header>
+                    <div class="technical-drawing" aria-hidden="true">
+                        <div class="pistol-slide"></div><div class="pistol-grip"></div><div class="measurement m-one"></div><div class="measurement m-two"></div>
+                    </div>
+                    <div class="blueprint-copy">
+                        <span class="availability">DISPONIBLE</span>
+                        <h2>Schéma SNS Pistol</h2>
+                        <p>Plan coté, nomenclature des pièces et ordre d’assemblage complet.</p>
+                        <div class="price-row"><span>Prix du dossier</span><strong id="schema-price">0 $</strong></div>
+                        <button id="buy-schema" class="buy-button" type="button">Acheter le schéma</button>
+                    </div>
+                </article>
+
+                <article class="blueprint locked blueprint-one">
+                    <span class="paper-pin dark" aria-hidden="true"></span><small>DOSSIER C-14</small>
+                    <div class="locked-sketch compact"></div><h3>Carabine compacte</h3><span>Classifié</span>
+                </article>
+                <article class="blueprint locked blueprint-two">
+                    <span class="paper-pin dark" aria-hidden="true"></span><small>PIÈCE R-08</small>
+                    <div class="locked-sketch slide"></div><h3>Culasse renforcée</h3><span>Indisponible</span>
+                </article>
+                <article class="blueprint locked blueprint-three">
+                    <span class="paper-pin dark" aria-hidden="true"></span><small>PROTOCOLE A-3</small>
+                    <div class="locked-sketch mechanism"></div><h3>Mécanisme automatique</h3><span>Classifié</span>
+                </article>
+
+                <div class="hand-note" aria-hidden="true">Une arme fiable commence<br>toujours par un plan précis.</div>
+            </div>
+
+            <footer class="crate-footer"><span>Matériel vendu sans garantie • aucune question</span><span><kbd>ÉCHAP</kbd> Fermer</span></footer>
+            <div id="toast" class="toast" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <aside id="voice-hint" class="voice-hint hidden" aria-live="polite">
+        <span class="voice-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <div><small>VOIX EN COURS</small><strong id="voice-instruction">Première écoute obligatoire</strong></div>
+    </aside>
+    <audio id="voice-player" preload="auto"></audio>
+    <script src="app.js"></script>
+</body>
+</html>
