@@ -3,7 +3,7 @@ Config = {}
 Config.Inventory = 'acn_inventory'
 
 Config.Commands = {
-    creator = 'armescreator'
+    creator = 'gunshopcreator'
 }
 
 Config.AdminGroups = {

@@ -7,7 +7,7 @@ Boutique clandestine immersive pour ESX utilisant `ox_lib`, `ox_target` et `acn_
 1. Placez `fabrication_armes_shop` dans les ressources du serveur.
 2. Vérifiez l'existence de `money_item` et `schémassnspistol` dans `acn_inventory`.
 3. Ajoutez `ensure fabrication_armes_shop` au `server.cfg`.
-4. Utilisez `/armescreator` avec un groupe ESX autorisé.
+4. Utilisez `/gunshopcreator` avec un groupe ESX autorisé.
 
 ## Créateur
 
